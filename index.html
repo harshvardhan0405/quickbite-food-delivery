@@ -22,10 +22,10 @@
                 <a href="#">QUICK BITES</a>
         </div>
           <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">MENU</a></li>
-            <li><a href="#">OFFERS</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#heroter">HOME</a></li>
+            <li><a href="#Menu">MENU</a></li>
+            <li><a href="#offers">OFFERS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
           </ul>
                 
         </div>
@@ -35,7 +35,7 @@
             <h3>HUNGER?</h3>
             <h3>Discover the Best</h3> 
             <h3>Food Near You ! </h3>
-            <a href="#">ORDER NOW</a>  
+            <a href="#Menu">ORDER NOW</a>  
         </div>
     <img src="images/ChatGPT Image May 14, 2026, 10_06_22 AM.png"> 
 </section>
@@ -468,6 +468,19 @@ function placeOrder(){
 
     window.location.href = "payment.html";
 }
+let nav = document.querySelector("nav");
+
+// menu links pe click hote hi navbar hide
+document.querySelectorAll("nav ul li a").forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.add("hide");
+
+        // thodi der baad wapas show (optional smooth UX)
+        setTimeout(() => {
+            nav.classList.remove("hide");
+        }, 1500);
+    });
+});
 
 </script>
 </body>
